@@ -2,8 +2,10 @@
 import React from "react";
 import Dashboard from "../_components/dashboard/dashboard";
 
-import MonthlyEarnings from "../_components/dashboard/monthlyEarnings/monthlyEarnings";
-import YearlyBreakup from "../_components/dashboard/yearlyBreakup/yearlyBreakup";
+import TaskActivity from "../_components/dashboard/taskActivity/taskActivity";
+import RunningTasks from "../_components/dashboard/RunningTasks/runningTasks";
+import WeeklyTask from "../_components/dashboard/weeklyTask/weeklyTask";
+
 import Card from "../_components/dashboard/card/card";
 
 import HistoryCard from "../_components/dashboard/historyCard/card";
@@ -54,9 +56,10 @@ const Overview = () => {
         main={
           <>
             <div className="grid lg:grid-cols-12 lg:gap-y-0 gap-y-4 gap-x-4">
-              <div className="col-span-12 flex justify-between">
-                <YearlyBreakup />
-                <MonthlyEarnings />
+              <div className="col-span-12 grid grid-cols-9 gap-4">
+                <RunningTasks />
+                <TaskActivity />
+                <WeeklyTask />
               </div>
             </div>
             <br />
@@ -86,7 +89,7 @@ const Overview = () => {
             </div>
             <h1 className="font-semibold text-[26px] mt-6">History</h1>
             <div className="grid grid-cols-3 gap-y-4 lg:flex-row gap-x-6 mt-10 items-center">
-              {historyCardData.map((v,i) => (
+              {historyCardData.map((v, i) => (
                 <HistoryCard
                   key={i}
                   title={v.title}

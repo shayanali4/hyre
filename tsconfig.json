@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "constants/data.jsx", "app/_components/languageDropdown/languageDropdown.jsx", "app/_components/profileDropdown/profileDropdown.jsx", "app/_components/dashboard/chart/chart.jsx", "app/_components/dashboard/topPerformers/topPerformers.jsx", "app/_components/dashboard/customers/customers.jsx", "app/_components/dashboard/projects/projects.jsx", "app/_components/dashboard/yearlyBreakup/yearlyBreakup.jsx", "app/_components/dashboard/weeklyStats/weeklyStats.jsx", "app/_components/dashboard/social/social.jsx", "app/_components/dashboard/skeltonWeek/skeltonWeek.jsx", "app/_components/dashboard/card/card.jsx", "app/_components/dashboard/historyCard/card.jsx", "app/calender/page.jsx"  ],
+, "constants/data.jsx", "app/_components/languageDropdown/languageDropdown.jsx", "app/_components/profileDropdown/profileDropdown.jsx", "app/_components/dashboard/chart/chart.jsx", "app/_components/dashboard/topPerformers/topPerformers.jsx", "app/_components/dashboard/customers/customers.jsx", "app/_components/dashboard/projects/projects.jsx", "app/_components/dashboard/runningTasks/yearlyBreakup.jsx, "app/_components/dashboard/weeklyStats/weeklyStats.jsx", "app/_components/dashboard/social/social.jsx", "app/_components/dashboard/skeltonWeek/skeltonWeek.jsx", "app/_components/dashboard/card/card.jsx", "app/_components/dashboard/historyCard/card.jsx", "app/calender/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]

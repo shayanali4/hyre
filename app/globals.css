@@ -20,3 +20,9 @@ body {
   color: black;
   background: white;
 }
+.grid-cols-31 {
+  grid-template-columns: repeat(31, minmax(0, 1fr));
+}
+.draggable-event {
+  border: none !important;
+}

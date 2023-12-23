@@ -9,13 +9,13 @@ import {
 } from "@tabler/icons-react";
 import DashboardCard from "../../common/dashboardCard";
 
-const MonthlyEarnings = () => {
+const TaskActivity = () => {
   // chart color
   const primary = "#EF5225"; // Replace with your primary color
   const successlight = "#13DEB9"; // Replace with your success light color
 
   // chart
-  const optionsColumnChart = {
+  const options = {
     chart: {
       type: "area",
       fontFamily: "'Plus Jakarta Sans', sans-serif;",
@@ -23,7 +23,7 @@ const MonthlyEarnings = () => {
       toolbar: {
         show: false,
       },
-      height: 70,
+      height: 250,
       sparkline: {
         enabled: true,
       },
@@ -44,27 +44,59 @@ const MonthlyEarnings = () => {
     tooltip: {
       theme: "light", // Adjust based on your theme logic
       x: {
-        show: false,
+        format: "dddd",
+      },
+    },
+    xaxis: {
+      type: "category",
+      categories: [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      labels: {
+        show: true,
+      },
+    },
+    yaxis: {
+      title: {
+        text: "Number of Tasks",
+      },
+      labels: {
+        show: true,
       },
     },
   };
-  const seriesColumnChart = [
+
+  const series = [
     {
-      name: "",
-      color: primary,
-      data: [25, 66, 20, 40, 12, 58, 20],
+      name: "Tasks",
+      data: [
+        { x: "Sunday", y: 5 },
+        { x: "Monday", y: 8 },
+        { x: "Tuesday", y: 3 },
+        { x: "Wednesday", y: 6 },
+        { x: "Thursday", y: 7 },
+        { x: "Friday", y: 4 },
+        { x: "Saturday", y: 2 },
+      ],
     },
   ];
 
   return (
-    <>
+    <div className="col-span-5">
       <DashboardCard
         title="Activity"
         action={
           <div
             color="secondary"
             className=" flex flex-row justify-center items-center"
-          ><label>Weekly</label>
+          >
+            <label>Weekly</label>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-chevron-down"
@@ -83,32 +115,19 @@ const MonthlyEarnings = () => {
           </div>
         }
         footer={
-          <div className="h-70">
+          <div className="h-[170px]">
             <Chart
-              options={optionsColumnChart}
-              series={seriesColumnChart}
+              options={options}
+              series={series}
               type="area"
               width={"100%"}
-              height="70px"
+              height="170px"
             />
           </div>
         }
-      >
-        {/* <>
-          <div className="text-2xl font-semibold">$6,820</div>
-          <div className="flex flex-row items-center space-x-1 mt-2 -mb-4">
-            <div className="bg-[#FDEDE8] w-8 h-8 rounded-full flex items-center justify-center">
-              <IconArrowDownRight width={18} color="#FA896B" />
-            </div>
-            <div className="text-sm text-gray-500">
-              <span className="font-semibold text-0.8">+9%</span>
-               last year
-            </div>
-          </div>
-        </> */}
-      </DashboardCard>
-    </>
+      ></DashboardCard>
+    </div>
   );
 };
 
-export default MonthlyEarnings;
+export default TaskActivity;

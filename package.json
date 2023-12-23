@@ -10,9 +10,13 @@
   },
   "dependencies": {
     "@tabler/icons-react": "^2.44.0",
+    "moment": "^2.29.4",
     "next": "14.0.4",
     "react": "^18",
     "react-apexcharts": "^1.4.1",
+    "react-big-calendar": "^1.8.5",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18",
     "tabler": "^1.0.0-alpha.8"
   },

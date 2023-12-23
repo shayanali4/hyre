@@ -14,7 +14,7 @@ const Dashboard = ({ main }) => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   return (
-    <div className="flex absolute lg:fixed h-screen w-full">
+    <div className="flex absolute lg:fixed h-screen min-w-full">
       <div className="bg-primary">
         <aside
           className={`absolute lg:relative z-50 border-r-[1px] bg-primary border-hr ease-in-out duration-300 transition-width
@@ -108,7 +108,9 @@ const Dashboard = ({ main }) => {
             </div>
           </div>
         </div>
-        <div className="text-black min-h-screen pb-6">{main}</div>
+        <div className="text-black max-h-[90vh] pb-6 max-w-[90vw] overflow-auto pr-5">
+          {main}
+        </div>
       </main>
     </div>
   );

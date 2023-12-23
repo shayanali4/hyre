@@ -13,7 +13,7 @@ const DashboardCard = ({
 }) => {
   return (
     <div
-      className={`border-[1px] border-lightWhite ${bgColor} ${text}  rounded-md shadow-sm`}
+      className={`border-[1px] border-lightWhite ${bgColor} ${text}  rounded-md shadow-sm  relative h-full`}
     >
       {cardheading ? (
         <div className="px-8 py-8">
